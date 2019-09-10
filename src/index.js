@@ -1,11 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 
 
-const App = () => {
+
+
+const Img = () => {
+    return (
+        <p>Hello kuva!</p>
+    )
+}
+
+const Preview = (props) => {
     return (
         <div>
-            <h1>Hello divi-demo!</h1>
+            <h3>{props.otsikko}</h3>
+            <img src={props.kuva}></img>
+            <p>{props.kuva} HALOO SATTANA</p>
+        </div>
+    )
+}
+
+const Header = () => {
+    // Linkit landeriin 'meidän logo' kirjautuminen Metropolia API 
+    return (
+        <p>Hello header</p>
+    )
+}
+
+const Grid = ( {tyotArray} ) => {
+    // Grid toiminta: for työ in työt <Preview /> ja css grid. 
+    // const renderPreviews = () => {
+        // tyotArray.map(tyo => {
+        //     console.log(tyo)
+        //     return (
+        //         <Preview otsikko="otsiikkoo" kuva="otsiiiikkoo" />
+        //     )
+        // })
+        const renderPreviews = () =>
+            tyotArray.map(tyo => <Preview otsikko={tyo.otsikko} kuva={tyo.kuva} />)
+        return (
+            <div>{renderPreviews()}</div>
+        )
+}
+
+
+const App = () => {
+
+    // Testidataa alapuolella, korvaa kenttä "kuva" kuvan urlilla
+
+    let tyotArray = [
+        {otsikko:"otsikko1", kuva:"kuva1"},
+        {otsikko:"otsikko2", kuva:"kuva2"},
+        {otsikko:"otsikko3", kuva:"kuva3"},
+        {otsikko:"otsikko4", kuva:"kuva4"},
+        {otsikko:"otsikko5", kuva:"kuva5"},
+
+    ]
+
+    const [tyotState, setTyotState] = useState(tyotArray)
+
+    
+    return (
+        <div>
+            <Header /> 
+            <Grid tyotArray={tyotState} />
         </div>    
     )
 }
