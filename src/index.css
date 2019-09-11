@@ -1,0 +1,9 @@
+/* Import styles to index.js with import './index.css' */
+/* Refer to components with className */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px;
+}
+

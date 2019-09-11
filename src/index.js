@@ -1,29 +1,31 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
+import './index.css'
 
 
 
 
-const Img = () => {
-    return (
-        <p>Hello kuva!</p>
-    )
-}
-
-const Preview = (props) => {
-    return (
-        <div>
-            <h3>{props.otsikko}</h3>
-            <img src={props.kuva}></img>
-            <p>{props.kuva} HALOO SATTANA</p>
-        </div>
-    )
-}
 
 const Header = () => {
-    // Linkit landeriin 'meidän logo' kirjautuminen Metropolia API 
+    // Header container jaettu: nav + hero
+    // Navissa 1. logo 2. sisäänkirjautuminen + linkki metropolian ländärille
+    // Hero-containerissa h1 + hero paragraph
+    // Pidetään mielessä pitääkö Header komponentti rikkoa vielä
+    // erillisiksi nav- ja hero -komponenteiksi
     return (
-        <p>Hello header</p>
+        <header className='header-container'>
+            <nav classname='header-navigation'>
+                <img src="#" alt="#" className='logo'></img>
+                <ul className='header navigation-items'>
+                    <li><a href="#"> Log in </a></li>
+                    <li><a href="#"> Metropolia </a></li>
+                </ul>
+            </nav>
+            <div className='hero-container'>
+                <h1> Metropolian Digitaalinen Muotoilu </h1>
+                <p> Tähän kuvaavaa tekstiä Digitaalisesta Muotoilusta. </p>
+            </div>
+        </header>
     )
 }
 
@@ -39,8 +41,24 @@ const Grid = ( {tyotArray} ) => {
         const renderPreviews = () =>
             tyotArray.map(tyo => <Preview otsikko={tyo.otsikko} kuva={tyo.kuva} />)
         return (
-            <div>{renderPreviews()}</div>
+            <div className='grid-container'>{renderPreviews()}</div>
         )
+}
+
+const Img = () => {
+    return (
+        <p>Hello kuva!</p>
+    )
+}
+
+const Preview = (props) => {
+    return (
+        <div>
+            <img src={props.kuva} alt=" # "></img>
+            <h2>{props.otsikko}</h2>
+            <p>{props.kuva} HALOO SATTANA</p>
+        </div>
+    )
 }
 
 
