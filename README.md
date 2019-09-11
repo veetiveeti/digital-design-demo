@@ -8,6 +8,14 @@ Lähteet:
 
 - Vanhan demosaitin projektikansio: https://drive.google.com/drive/u/0/folders/1VFLaQvMuQO0zEUbO74LgCc9z-Ezkae-8
 
+## Metropolia Node:
+
+Yhteys palvelimelle joko Metropolian verkosta tai sitten Metropolia-VPN-yhteydellä kotoa käsin: https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071.
+
+*Palvelin:* projects.metropolia.fi
+*Tunnus:* diviportfolio
+*Salasana:* 3957dNcpwkd4
+
 ## Työlistat
 
 Ensimmäinen viikko:
@@ -18,6 +26,11 @@ Ensimmäinen viikko:
 - Selvitetään Metropolian palvelinmahdollisuudet asap.
 - Tiistaina 10.9. hinkataan IA ja raudat.
 - Typescriptistä luovuttu, plain ol' React it is.
+
+Toinen viikko:
+
+- IA + Raudat
+- Frontin core
 
 
 
