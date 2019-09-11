@@ -12,9 +12,9 @@ Lähteet:
 
 Yhteys palvelimelle joko Metropolian verkosta tai sitten Metropolia-VPN-yhteydellä kotoa käsin: https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071.
 
-*Palvelin:* projects.metropolia.fi
-*Tunnus:* diviportfolio
-*Salasana:* 3957dNcpwkd4
+- **Palvelin:** projects.metropolia.fi
+- **Tunnus:** diviportfolio
+- **Salasana:** 3957dNcpwkd4
 
 ## Työlistat
 
