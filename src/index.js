@@ -10,11 +10,11 @@ const Header = () => {
     // Header container jaettu: nav + hero
     // Navissa 1. logo 2. sisäänkirjautuminen + linkki metropolian ländärille
     // Hero-containerissa h1 + hero paragraph
-    // Pidetään mielessä pitääkö Header komponentti rikkoa vielä
-    // erillisiksi nav- ja hero -komponenteiksi
+    // Header-komponentti eriytetään vielä omiksi nav- ja hero-komponenteikseen
+    // ja laitetaan Header-parentin childreneiksi
     return (
         <header className='header-container'>
-            <nav classname='header-navigation'>
+            <nav className='header-navigation'>
                 <img src="#" alt="#" className='logo'></img>
                 <ul className='header navigation-items'>
                     <li><a href="#"> Log in </a></li>
@@ -26,6 +26,29 @@ const Header = () => {
                 <p> Tähän kuvaavaa tekstiä Digitaalisesta Muotoilusta. </p>
             </div>
         </header>
+    )
+}
+
+//Omaksi komponentikseen eristetty navigation
+const Navigation = () => {
+    return (
+        <nav className='header-navigation'>
+            <img src="#" alt="#" className='logo'></img>
+            <ul className='header navigation-items'>
+                <li><a href="#"> Log in </a></li>
+                <li><a href="#"> Metropolia </a></li>
+            </ul>            
+        </nav>
+    )
+}
+
+//Omaksi komponentikseen eristetty hero
+const Hero = () => {
+    return (
+     <div className='hero-container'>
+        <h1> Metropolian Digitaalinen Muotoilu </h1>
+        <p> Tähän kuvaavaa tekstiä Digitaalisesta Muotoilusta. </p>
+     </div>        
     )
 }
 
@@ -53,7 +76,7 @@ const Img = () => {
 
 const Preview = (props) => {
     return (
-        <div>
+        <div className='preview-card'>
             <img src={props.kuva} alt=" # "></img>
             <h2>{props.otsikko}</h2>
             <p>{props.kuva} HALOO SATTANA</p>
@@ -79,8 +102,11 @@ const App = () => {
 
     
     return (
-        <div>
-            <Header /> 
+        <div className='wrapper'>
+            <header>
+                <Navigation />
+                <Hero />
+            </header> 
             <Grid tyotArray={tyotState} />
         </div>    
     )
