@@ -30,21 +30,35 @@ h2 {
    
 }
 
+/* Navigation */
+
 .header-navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .header-navigation-items {
     display: flex;
     flex-direction: row;
-    align-content: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     list-style: none;
 }
 
+/* Hero */
+
 .hero-container {
     padding: 20px;
+}
+
+.yellowLine {
+    display: block;
+    margin-top: -14px;
+    width: 78px;
+    border-top: 4px solid #F2CC02;
 }
 
 .hero-container p {

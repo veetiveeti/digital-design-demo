@@ -48,6 +48,7 @@ const Hero = () => {
     return (
      <section className='hero-container'>
         <h1> Digitaalinen Muotoilu </h1>
+        <span className="yellowLine"/>
         <p> Hero Paragraph Muotoilun opiskelijoiden tekemiä töitä koottuna yhdelle 
             sivustolle Ipsumisti jossa Digi Muoto Muotoilua elämässä ja loremia järjessä. </p>
      </section>        
