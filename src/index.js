@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css'
+import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
 
 
 
 
-
+/* -- Header component eriytetty omiksi nav- ja hero-komponenteikseen ja 
+laitetaan Header-parentin childreneiksi
 const Header = () => {
     // Header container jaettu: nav + hero
     // Navissa 1. logo 2. sisäänkirjautuminen + linkki metropolian ländärille
     // Hero-containerissa h1 + hero paragraph
-    // Header-komponentti eriytetään vielä omiksi nav- ja hero-komponenteikseen
-    // ja laitetaan Header-parentin childreneiksi
     return (
         <header className='header-container'>
             <nav className='header-navigation'>
@@ -28,12 +28,13 @@ const Header = () => {
         </header>
     )
 }
+*/
 
-//Omaksi komponentikseen eristetty navigation
+//Omaksi komponentikseen eristetty navigation - Logo importattu './assets/'
 const Navigation = () => {
     return (
         <nav className='header-navigation'>
-            <img src="#" alt="#" className='logo'></img>
+            <Logo />
             <ul className='header navigation-items'>
                 <li><a href="#"> Log in </a></li>
                 <li><a href="#"> Metropolia </a></li>
@@ -45,10 +46,11 @@ const Navigation = () => {
 //Omaksi komponentikseen eristetty hero
 const Hero = () => {
     return (
-     <div className='hero-container'>
-        <h1> Metropolian Digitaalinen Muotoilu </h1>
-        <p> Tähän kuvaavaa tekstiä Digitaalisesta Muotoilusta. </p>
-     </div>        
+     <section className='hero-container'>
+        <h1> Digitaalinen Muotoilu </h1>
+        <p> Hero Paragraph Muotoilun opiskelijoiden tekemiä töitä koottuna yhdelle 
+            sivustolle Ipsumisti jossa Digi Muoto Muotoilua elämässä ja loremia järjessä. </p>
+     </section>        
     )
 }
 
@@ -79,7 +81,8 @@ const Preview = (props) => {
         <div className='preview-card'>
             <img src={props.kuva} alt=" # "></img>
             <h2>{props.otsikko}</h2>
-            <p>{props.kuva} HALOO SATTANA</p>
+            <p className='card-paragraph'>{props.kuva} Lyhyt kuvaus
+             ensimmäisestä työstä, jossa opiskelijat tekivät ensimmäisen työn tähän töiden listalle.</p>
         </div>
     )
 }
@@ -90,11 +93,11 @@ const App = () => {
     // Testidataa alapuolella, korvaa kenttä "kuva" kuvan urlilla
 
     let tyotArray = [
-        {otsikko:"otsikko1", kuva:"kuva1"},
-        {otsikko:"otsikko2", kuva:"kuva2"},
-        {otsikko:"otsikko3", kuva:"kuva3"},
-        {otsikko:"otsikko4", kuva:"kuva4"},
-        {otsikko:"otsikko5", kuva:"kuva5"},
+        {otsikko:"Otsikko1", kuva:"kuva1"},
+        {otsikko:"Otsikko2", kuva:"kuva2"},
+        {otsikko:"Otsikko3", kuva:"kuva3"},
+        {otsikko:"Otsikko4", kuva:"kuva4"},
+        {otsikko:"Otsikko5", kuva:"kuva5"},
 
     ]
 

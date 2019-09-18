@@ -3,18 +3,20 @@
 
 /* Headline font: Open Sans, paragraph font: Crimson Text */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700&display=swap');
 
 body {
     margin: 0 auto;
     max-width: 1080px;
-    font-family: 'Crimson Text', sans-serif;
-    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* Related to typography */
 h1 {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
 }
 
 h2 {
@@ -25,7 +27,7 @@ h2 {
 
 .wrapper {
    margin: 0 auto;
-   max-width: 1080px;
+   
 }
 
 .header-navigation {
@@ -33,14 +35,50 @@ h2 {
     flex-direction: row;
 }
 
+.hero-container {
+    padding: 20px;
+}
+
+.hero-container p {
+    max-width: 65%;
+}
+
+/* Container wrapper for Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 200px;
     grid-gap: 20px;
+    padding: 20px;
     background-color: #ededed;
+}
+
+/* Grid container medium breakpoint (tablet)*/
+@media only screen and (max-width: 920px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+/* Grid container small breakpoint (mobile)*/
+@media only screen and (max-width: 520px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .card-paragraph {
+        max-width: 100%;
+    }
 }
 
 .preview-card {
     background-color: #ffff;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.card-paragraph {
+    max-width: 96%;
 }
