@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css'
 import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
+import axios from 'axios'
 
 
 
@@ -64,7 +65,13 @@ const Grid = ( {tyotArray} ) => {
         //     )
         // })
         const renderPreviews = () =>
-            tyotArray.map(tyo => <Preview otsikko={tyo.otsikko} kuva={tyo.kuva} />)
+            tyotArray.map(tyo => <Preview name={tyo.name} 
+                        picture="kuvia ei tueta vielä" 
+                        description={tyo.description}
+                        text={tyo.text}
+                        course={tyo.course}
+                        user={tyo.user}
+                />)
         return (
             <div className='grid-container'>{renderPreviews()}</div>
         )
@@ -79,10 +86,11 @@ const Img = () => {
 const Preview = (props) => {
     return (
         <div className='preview-card'>
-            <img src={props.kuva} alt=" # "></img>
-            <h2>{props.otsikko}</h2>
-            <p className='card-paragraph'>{props.kuva} Lyhyt kuvaus
-             ensimmäisestä työstä, jossa opiskelijat tekivät ensimmäisen työn tähän töiden listalle.</p>
+            <img src={props.picture} alt=" # "></img>
+            <h2>{props.name}</h2>
+            <p className='card-paragraph'>{props.picture} {props.description}</p>
+            <p>{props.course}</p>
+            <p>{props.user}</p>
         </div>
     )
 }
@@ -91,18 +99,21 @@ const Preview = (props) => {
 const App = () => {
 
     // Testidataa alapuolella, korvaa kenttä "kuva" kuvan urlilla
+    // Haetaan data from mongoDB
 
-    let tyotArray = [
-        {otsikko:"Otsikko1", kuva:"kuva1"},
-        {otsikko:"Otsikko2", kuva:"kuva2"},
-        {otsikko:"Otsikko3", kuva:"kuva3"},
-        {otsikko:"Otsikko4", kuva:"kuva4"},
-        {otsikko:"Otsikko5", kuva:"kuva5"},
+    
 
-    ]
-
-    const [tyotState, setTyotState] = useState(tyotArray)
-
+    const [tyotState, setTyotState] = useState([])
+    
+    useEffect(() => {
+        console.log('effect')
+        axios  
+            .get('http://localhost:3001/submissions')
+            .then(response => {
+                console.log('promise fulfilled')
+                setTyotState(response.data)
+            })
+    }, [])
     
     return (
         <div className='wrapper'>
