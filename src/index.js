@@ -67,7 +67,9 @@ const Grid = ( {tyotArray} ) => {
         const renderPreviews = () =>
             tyotArray.map(tyo => <Preview otsikko={tyo.otsikko} kuva={tyo.kuva} />)
         return (
+            <section className="grid-wrapper">
             <div className='grid-container'>{renderPreviews()}</div>
+            </section>
         )
 }
 
