@@ -37,7 +37,7 @@ Kolmas viikko:
 
 - Home page layout
 - JSX & CSS strukturointi
-- [x]~Breakpointien määrittely responsiiviseen gridiin~
+- [x] ~Breakpointien määrittely responsiiviseen gridiin~
 - Selvitetään onko mahdollista deployata Appia Metropolian palvelimelle
 
 
