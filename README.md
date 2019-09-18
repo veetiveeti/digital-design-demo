@@ -29,8 +29,16 @@ Ensimmäinen viikko:
 
 Toinen viikko:
 
-- IA + Raudat
-- Frontin core
+- ~IA + Raudat~
+- ~Frontin core~
+- ~Backend core~
+
+Kolmas viikko:
+
+- Home page layout
+- JSX & CSS strukturointi
+- ~Breakpointien määrittely responsiiviseen gridiin~ 
+- Selvitetään onko mahdollista deployata Appia Metropolian palvelimelle
 
 
 
