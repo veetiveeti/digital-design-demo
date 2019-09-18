@@ -35,7 +35,7 @@ const Navigation = () => {
     return (
         <nav className='header-navigation'>
             <Logo />
-            <ul className='header navigation-items'>
+            <ul className='header-navigation-items'>
                 <li><a href="#"> Log in </a></li>
                 <li><a href="#"> Metropolia </a></li>
             </ul>            

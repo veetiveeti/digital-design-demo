@@ -33,6 +33,14 @@ h2 {
 .header-navigation {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.header-navigation-items {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    list-style: none;
 }
 
 .hero-container {
