@@ -2,34 +2,9 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css'
 import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
+import mainImage from './assets/hero_placeholder_image.png';
 import axios from 'axios'
 
-
-
-
-/* -- Header component eriytetty omiksi nav- ja hero-komponenteikseen ja 
-laitetaan Header-parentin childreneiksi
-const Header = () => {
-    // Header container jaettu: nav + hero
-    // Navissa 1. logo 2. sisäänkirjautuminen + linkki metropolian ländärille
-    // Hero-containerissa h1 + hero paragraph
-    return (
-        <header className='header-container'>
-            <nav className='header-navigation'>
-                <img src="#" alt="#" className='logo'></img>
-                <ul className='header navigation-items'>
-                    <li><a href="#"> Log in </a></li>
-                    <li><a href="#"> Metropolia </a></li>
-                </ul>
-            </nav>
-            <div className='hero-container'>
-                <h1> Metropolian Digitaalinen Muotoilu </h1>
-                <p> Tähän kuvaavaa tekstiä Digitaalisesta Muotoilusta. </p>
-            </div>
-        </header>
-    )
-}
-*/
 
 //Omaksi komponentikseen eristetty navigation - Logo importattu './assets/'
 const Navigation = () => {
@@ -48,10 +23,13 @@ const Navigation = () => {
 const Hero = () => {
     return (
      <section className='hero-container'>
+        <div className='hero-text-container'>
         <h1> Digitaalinen Muotoilu </h1>
         <span className="yellowLine"/>
         <p> Hero Paragraph Muotoilun opiskelijoiden tekemiä töitä koottuna yhdelle 
             sivustolle Ipsumisti jossa Digi Muoto Muotoilua elämässä ja loremia järjessä. </p>
+        </div>
+        <div className='main-image-container'></div>
      </section>        
     )
 }
