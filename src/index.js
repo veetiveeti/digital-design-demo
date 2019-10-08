@@ -10,6 +10,9 @@ import axios from 'axios'
 const Navigation = () => {
     return (
         <nav className='header-navigation'>
+        <div className='skip'>
+        <a href="#main">Skip to Main Content</a>
+        </div>
             <Logo />
             <ul className='header-navigation-items'>
                 <li><a href="#"> Log in </a></li>
@@ -29,7 +32,7 @@ const Hero = () => {
         <p> Hero Paragraph Muotoilun opiskelijoiden tekemiä töitä koottuna yhdelle 
             sivustolle Ipsumisti jossa Digi Muoto Muotoilua elämässä ja loremia järjessä. </p>
         </div>
-        <div className='main-image-container'></div>
+        <div className='main-image-container'><img className="hero-image" src={mainImage}/></div>
      </section>        
     )
 }
@@ -44,12 +47,12 @@ const Grid = ( {tyotArray} ) => {
         //     )
         // })
         const renderPreviews = () =>
-            tyotArray.map(tyo => <Preview name={tyo.name} 
-                        picture="kuvia ei tueta vielä" 
+            tyotArray.map(tyo => <Preview key={tyo.id} name={tyo.name}
+                        // picture= not yet supported
                         description={tyo.description}
                         text={tyo.text}
-                        course={tyo.course}
-                        user={tyo.user}
+                        //course={tyo.course}
+                        //user={tyo.user}
                 />)
         return (
             <section className="grid-wrapper">
@@ -67,7 +70,7 @@ const Img = () => {
 const Preview = (props) => {
     return (
         <div className='preview-card'>
-            <img src={props.picture} alt=" # "></img>
+            <img src={mainImage}/>
             <h2>{props.name}</h2>
             <p className='card-paragraph'>{props.picture} {props.description}</p>
             <p>{props.course}</p>
@@ -102,7 +105,9 @@ const App = () => {
                 <Navigation />
                 <Hero />
             </header> 
+            <main id='main'>
             <Grid tyotArray={tyotState} />
+            </main>
         </div>    
     )
 }
