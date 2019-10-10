@@ -5,13 +5,13 @@ import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
 import mainImage from './assets/hero_placeholder_image.png';
 import axios from 'axios'
 
-//Omaksi komponentikseen eristetty navigation - Logo importattu './assets/'
+//navigation - Logo importattu './assets/'
 const Navigation = () => {
     return (
         <nav className='header-navigation'>
-            <div a className='skip' href='#main' role='link' tabIndex='0'><a>
+            <a className='skip' href='#main' role='link' tabIndex='0'>
              Skip to Main Content
-            </a></div>
+            </a>
             <Logo />
             <ul className='header-navigation-items' role='navigation'>
                 <li><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
@@ -21,7 +21,7 @@ const Navigation = () => {
     )
 }
 
-//Omaksi komponentikseen eristetty hero
+//Etusivu Hero
 const Hero = () => {
     return (
      <section className='hero-container'>
@@ -36,6 +36,22 @@ const Hero = () => {
     )
 }
 
+const ProjectInformation = () => {
+    return (
+     <section className='hero-container'>
+        <div className='hero-text-container'>
+        <h1> Falling Leads </h1>
+        <span className="yellowLine"/>
+        <p> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
+             Application provides a platform for creating and sharing games and stories. </p>
+        </div>
+        <div className='makers-year'>
+            
+        </div>
+     </section>        
+    )
+}
+
 const Grid = ( {tyotArray} ) => {
     // Grid toiminta: for työ in työt <Preview /> ja css grid. 
     // const renderPreviews = () => {
@@ -43,7 +59,7 @@ const Grid = ( {tyotArray} ) => {
         //     console.log(tyo)
         //     return (
         //         <Preview otsikko="otsiikkoo" kuva="otsiiiikkoo" />
-        //     )
+        // Jos laitetaan App komponenttiin niin: <Grid tyotArray={tyotState} />    )
         // })
         const renderPreviews = () =>
             tyotArray.map(tyo => <Preview key={tyo.id} name={tyo.name}
@@ -102,10 +118,9 @@ const App = () => {
         <div className='wrapper'>
             <header>
                 <Navigation />
-                <Hero />
+                <ProjectInformation />
             </header> 
-            <main id='main' role='portfolio' aria-label='Here is a collection of works on a grid. Each work has their own card.'>
-            <Grid tyotArray={tyotState} />
+            <main>
             </main>
         </div>    
     )
