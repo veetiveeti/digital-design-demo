@@ -16,30 +16,6 @@ Yhteys palvelimelle joko Metropolian verkosta tai sitten Metropolia-VPN-yhteydel
 - **Tunnus:** diviportfolio
 - **Salasana:** 3957dNcpwkd4
 
-## Työlistat
-
-Ensimmäinen viikko:
-
-- Otettiin yhteys epäonnistuneisiin junior-diveihin.
-- Mari asiakkaaksi, ensimmäinen tapaaminen perjantaina 13.9. klo 13:00.
-- Kaikki tehdään uusiksi. Vain projektisisällöt lainataan aiemmasta projektista.
-- Selvitetään Metropolian palvelinmahdollisuudet asap.
-- Tiistaina 10.9. hinkataan IA ja raudat.
-- Typescriptistä luovuttu, plain ol' React it is.
-
-Toinen viikko:
-
-- [x] ~IA + Raudat~
-- [x] ~Frontin core~
-- [x] ~Backend core~
-
-Kolmas viikko:
-
-- Home page layout
-- JSX & CSS strukturointi
-- [x] ~Breakpointien määrittely responsiiviseen gridiin~
-- Selvitetään onko mahdollista deployata Appia Metropolian palvelimelle
-
 
 
 
