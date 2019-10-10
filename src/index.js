@@ -5,18 +5,17 @@ import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
 import mainImage from './assets/hero_placeholder_image.png';
 import axios from 'axios'
 
-
 //Omaksi komponentikseen eristetty navigation - Logo importattu './assets/'
 const Navigation = () => {
     return (
         <nav className='header-navigation'>
-        <div className='skip'>
-        <a href="#main">Skip to Main Content</a>
-        </div>
+            <div a className='skip' href='#main' role='link' tabIndex='0'><a>
+             Skip to Main Content
+            </a></div>
             <Logo />
-            <ul className='header-navigation-items'>
-                <li><a href="#"> Log in </a></li>
-                <li><a href="#"> Metropolia </a></li>
+            <ul className='header-navigation-items' role='navigation'>
+                <li><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
+                <li><a href="#" role='link' aria-label='This will transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
             </ul>            
         </nav>
     )
@@ -27,10 +26,10 @@ const Hero = () => {
     return (
      <section className='hero-container'>
         <div className='hero-text-container'>
-        <h1> Digitaalinen Muotoilu </h1>
+        <h1> Digital Design </h1>
         <span className="yellowLine"/>
-        <p> Hero Paragraph Muotoilun opiskelijoiden tekemiä töitä koottuna yhdelle 
-            sivustolle Ipsumisti jossa Digi Muoto Muotoilua elämässä ja loremia järjessä. </p>
+        <p> Hero Paragraph the collected bestsellers of Digital Design students, now as a coherent
+         portfolio Digital Form Design life and purpose mental stuff. </p>
         </div>
         <div className='main-image-container'><img className="hero-image" src={mainImage}/></div>
      </section>        
@@ -105,7 +104,7 @@ const App = () => {
                 <Navigation />
                 <Hero />
             </header> 
-            <main id='main'>
+            <main id='main' role='portfolio' aria-label='Here is a collection of works on a grid. Each work has their own card.'>
             <Grid tyotArray={tyotState} />
             </main>
         </div>    
