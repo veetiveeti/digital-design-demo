@@ -132,9 +132,72 @@ header {
 }
 
 .hero-image {
-    width: 100%;
+    max-width: 1280px;
     height: auto;
 }
+
+/* Hero view when a project is opened*/
+
+.hero-project-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    padding: 20px 20px 40px 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.project-headline {
+    margin-top: 0;
+}
+
+.short-description {
+    margin-top: 20px;
+}
+
+.makers-year {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.makers-year li {
+    list-style: none;
+}
+
+.makers, .year {
+    margin-top: 0;
+}
+
+/* Main Content when project is opened */
+
+.hero-cover-image {
+    margin: 0;
+    height: 820px;
+    width: 100%;
+}
+
+/* Grid container small breakpoint (mobile)*/
+@media only screen and (max-width: 520px) {
+
+    .hero-project-container {
+        padding: 20px 20px 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-headline {
+        margin-top: 0px;
+        line-height: 1.2;
+    }
+
+    .short-description {
+        max-width: 300px;
+    }
+
+}
+
+/* Project preview Grid */
 
 .grid-wrapper {
     background-color: #f0f0f0;

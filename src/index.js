@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css'
 import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
 import mainImage from './assets/hero_placeholder_image.png';
+import coverImage from './assets/hero-cover-image-placeholder.png';
 import axios from 'axios'
 
 //navigation - Logo importattu './assets/'
@@ -36,17 +37,28 @@ const Hero = () => {
     )
 }
 
-const ProjectInformation = () => {
+const ProjectInformation = (props) => {
+    //This data should be received from parent component with props
+
     return (
-     <section className='hero-container'>
+     <section className='hero-project-container'>
         <div className='hero-text-container'>
-        <h1> Falling Leads </h1>
+        <h1 className='project-headline'> Falling Leads </h1>
         <span className="yellowLine"/>
-        <p> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
+        <p className='short-description'> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
              Application provides a platform for creating and sharing games and stories. </p>
         </div>
         <div className='makers-year'>
-            
+            <ul className='makers'>
+                <h2>Team</h2>
+                <li>Johanna</li>
+                <li>Teemu</li>
+                <li>Akseli</li>
+            </ul>
+            <ul className='year'>
+                <h2>Year</h2>
+                <li>2017</li>
+            </ul>
         </div>
      </section>        
     )
@@ -94,6 +106,13 @@ const Preview = (props) => {
     )
 }
 
+const HeroImage = () => {
+    return (
+        <div className='hero-cover-image'>
+        <img src= '#' alt="#"/>
+        </div>
+    )
+}
 
 const App = () => {
 
@@ -121,6 +140,7 @@ const App = () => {
                 <ProjectInformation />
             </header> 
             <main>
+                <HeroImage />
             </main>
         </div>    
     )
