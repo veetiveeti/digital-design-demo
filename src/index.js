@@ -37,33 +37,6 @@ const Hero = () => {
     )
 }
 
-const ProjectInformation = (props) => {
-    //This data should be received from parent component with props
-
-    return (
-     <section className='hero-project-container'>
-        <div className='hero-text-container'>
-        <h1 className='project-headline'> Falling Leads </h1>
-        <span className="yellowLine"/>
-        <p className='short-description'> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
-             Application provides a platform for creating and sharing games and stories. </p>
-        </div>
-        <div className='makers-year'>
-            <ul className='makers'>
-                <h2>Team</h2>
-                <li>Johanna</li>
-                <li>Teemu</li>
-                <li>Akseli</li>
-            </ul>
-            <ul className='year'>
-                <h2>Year</h2>
-                <li>2017</li>
-            </ul>
-        </div>
-     </section>        
-    )
-}
-
 const Grid = ( {tyotArray} ) => {
     // Grid toiminta: for työ in työt <Preview /> ja css grid. 
     // const renderPreviews = () => {
@@ -106,13 +79,72 @@ const Preview = (props) => {
     )
 }
 
+// Components for project specific view ("project landing page")
+
+//Hero section for the given project: Name -> short description -> Makers -> year
+
+const ProjectInformation = (props) => {
+    //This data should be received from parent component with props
+
+    return (
+     <section className='hero-project-container'>
+        <div className='hero-text-container'>
+        <h1 className='project-headline'> Falling Leads </h1>
+        <span className="yellowLine"/>
+        <p className='short-description'> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
+             Application provides a platform for creating and sharing games and stories. </p>
+        </div>
+        <div className='makers-year'>
+            <ul className='makers'>
+                <h2>Team</h2>
+                <li>Johanna</li>
+                <li>Teemu</li>
+                <li>Akseli</li>
+            </ul>
+            <ul className='year'>
+                <h2>Year</h2>
+                <li>2017</li>
+            </ul>
+        </div>
+     </section>        
+    )
+}
+
+//Fullbleed cover image for the given project
+
 const HeroImage = () => {
     return (
+        <section className='cover-image-wrapper'>
         <div className='hero-cover-image'>
         <img src= '#' alt="#"/>
         </div>
+        </section>
     )
 }
+
+const MainContent = () => {
+    return (
+     <section className='description-wrapper'>
+        <div className='description-container'>
+        <h2 className='long-description-headline'>Headline for Long Description</h2>
+        <p className='long-description-paragraph'>
+         Aratan balchoth barrow-downs battle of tumhalad battle-under-stars captain of morgoth dramborleg elves of the falas fang first deep gardner great horn helm hammerhand hild icebay of forochel karningul limlint lossoth ring of water sorcerer of dol guldur tobold hornblower venturers yearbook of tuckborough. Elenya fat goodbody king of nargothrond lobelia bracegirdle rose gamgee tim. 
+         Angband battle of the powers boffin citadel of gondor enerdhil ered nimrais fanuidhol gothmog, lord of balrogs great captain hobbiton hill hobbitry-in-arms isen long night lord of beleriand nan dungortheb nick cotton orophin paths of the dead pennies two trees of the valar. 
+         Adrahil, captain to ondoher alcarin, title of atanatar ii barahir grandson of faramir battle-under-stars captain of despair captains of the west harrowdale house of elrond last gate light of valinor myrtle burrows.         
+        </p>
+        </div>
+     </section>
+    )
+}
+
+const Footer = () => {
+    return (
+        <footer>
+
+        </footer>
+    )
+}
+
 
 const App = () => {
 
@@ -141,7 +173,9 @@ const App = () => {
             </header> 
             <main>
                 <HeroImage />
+                <MainContent />
             </main>
+            <Footer />
         </div>    
     )
 }

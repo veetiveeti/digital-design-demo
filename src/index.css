@@ -7,7 +7,7 @@
 body {
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     background-color: #f0f0f0;
 }
@@ -120,7 +120,7 @@ header {
 
 .hero-container p {
     margin-top: 26px;
-    max-width: 400px;
+    max-width: 480px;
 }
 
 .main-image-container {
@@ -132,7 +132,7 @@ header {
 }
 
 .hero-image {
-    max-width: 1280px;
+    max-width: 520px;
     height: auto;
 }
 
@@ -140,8 +140,10 @@ header {
 
 .hero-project-container {
     display: grid;
+    background-color: #ffff;
     grid-template-columns: repeat(2,1fr);
     align-content: center;
+    
     padding: 20px 20px 40px 20px;
     max-width: 1080px;
     margin: 0 auto;
@@ -153,12 +155,14 @@ header {
 
 .short-description {
     margin-top: 20px;
+    max-width: 480px;
 }
 
 .makers-year {
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
 }
 
 .makers-year li {
@@ -167,14 +171,48 @@ header {
 
 .makers, .year {
     margin-top: 0;
+    padding: 0;
 }
 
 /* Main Content when project is opened */
 
-.hero-cover-image {
-    margin: 0;
-    height: 820px;
+.cover-image-wrapper {
     width: 100%;
+    background-color: #ffff;
+}
+
+.hero-cover-image {
+    margin: 0 auto;
+    max-width: 1080px;
+    height: 420px;
+    background-color:rgb(83, 83, 83);
+    background-image: url('./assets/hero-cover-image-placeholder.png');
+}
+
+.description-wrapper {
+
+    background-color: #ffff;
+    padding: 20px 20px 20px 20px;
+}
+
+.description-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #ffff;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+.long-description-headline {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.long-description-paragraph {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Grid container small breakpoint (mobile)*/
@@ -288,3 +326,11 @@ z-index: 999;
     max-width: 96%;
 }
 
+/* Footer*/
+
+footer {
+    max-width: 100%;
+    background-color: rgb(32, 32, 32);
+    padding: 20px;
+    height: 40px;
+}
