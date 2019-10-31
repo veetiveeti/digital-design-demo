@@ -15,8 +15,8 @@ const Navigation = () => {
             </a>
             <Logo />
             <ul className='header-navigation-items' role='navigation'>
-                <li><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
-                <li><a href="#" role='link' aria-label='This will transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
+                <li className='log-in'><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
+                <li className='external-link'><a href="#" role='link' aria-label='This will transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
             </ul>            
         </nav>
     )
