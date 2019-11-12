@@ -3,25 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css'
 import { ReactComponent as Logo } from './assets/placeholder_logo.svg';
 import mainImage from './assets/hero_placeholder_image.png';
+import coverImage from './assets/hero-cover-image-placeholder.png';
 import axios from 'axios'
 
-//Omaksi komponentikseen eristetty navigation - Logo importattu './assets/'
+//navigation - Logo importattu './assets/'
 const Navigation = () => {
     return (
         <nav className='header-navigation'>
-            <div a className='skip' href='#main' role='link' tabIndex='0'><a>
+            <a className='skip' href='#main' role='link' tabIndex='0'>
              Skip to Main Content
-            </a></div>
+            </a>
             <Logo />
             <ul className='header-navigation-items' role='navigation'>
-                <li><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
-                <li><a href="#" role='link' aria-label='This will transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
+                <li className='log-in'><a href="#" role='link' aria-label='Log in as an authorized user'> Log in </a></li>
+                <li className='external-link'><a href="#" role='link' aria-label='This will transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
             </ul>            
         </nav>
     )
 }
 
-//Omaksi komponentikseen eristetty hero
+//Etusivu Hero
 const Hero = () => {
     return (
      <section className='hero-container'>
@@ -43,7 +44,7 @@ const Grid = ( {tyotArray} ) => {
         //     console.log(tyo)
         //     return (
         //         <Preview otsikko="otsiikkoo" kuva="otsiiiikkoo" />
-        //     )
+        // Jos laitetaan App komponenttiin niin: <Grid tyotArray={tyotState} />    )
         // })
         const renderPreviews = () =>
             tyotArray.map(tyo => <Preview key={tyo.id} name={tyo.name}
@@ -78,6 +79,71 @@ const Preview = (props) => {
     )
 }
 
+// Components for project specific view ("project landing page")
+
+//Hero section for the given project: Name -> short description -> Makers -> year
+
+const ProjectInformation = (props) => {
+    //This data should be received from parent component with props
+
+    return (
+     <section className='hero-project-container'>
+        <div className='hero-text-container'>
+        <h1 className='project-headline'> Falling Leads </h1>
+        <span className="yellowLine"/>
+        <p className='short-description'> Mobile application where user can solve or explore mysteries, phenomenons and themes individually or together with other users.
+             Application provides a platform for creating and sharing games and stories. </p>
+        </div>
+        <div className='makers-year'>
+            <ul className='makers'>
+                <h2>Team</h2>
+                <li>Johanna</li>
+                <li>Teemu</li>
+                <li>Akseli</li>
+            </ul>
+            <ul className='year'>
+                <h2>Year</h2>
+                <li>2017</li>
+            </ul>
+        </div>
+     </section>        
+    )
+}
+
+//Fullbleed cover image for the given project
+
+const HeroImage = () => {
+    return (
+        <section className='cover-image-wrapper'>
+        <div className='hero-cover-image'>
+        <img src= '#' alt="#"/>
+        </div>
+        </section>
+    )
+}
+
+const MainContent = () => {
+    return (
+     <section className='description-wrapper'>
+        <div className='description-container'>
+        <p className='long-description-paragraph'>
+         Aratan balchoth barrow-downs battle of tumhalad battle-under-stars captain of morgoth dramborleg elves of the falas fang first deep gardner great horn helm hammerhand hild icebay of forochel karningul limlint lossoth ring of water sorcerer of dol guldur tobold hornblower venturers yearbook of tuckborough. Elenya fat goodbody king of nargothrond lobelia bracegirdle rose gamgee tim. 
+         Angband battle of the powers boffin citadel of gondor enerdhil ered nimrais fanuidhol gothmog, lord of balrogs great captain hobbiton hill hobbitry-in-arms isen long night lord of beleriand nan dungortheb nick cotton orophin paths of the dead pennies two trees of the valar. 
+         Adrahil, captain to ondoher alcarin, title of atanatar ii barahir grandson of faramir battle-under-stars captain of despair captains of the west harrowdale house of elrond last gate light of valinor myrtle burrows.         
+        </p>
+        </div>
+     </section>
+    )
+}
+
+const Footer = () => {
+    return (
+        <footer>
+
+        </footer>
+    )
+}
+
 
 const App = () => {
 
@@ -102,11 +168,13 @@ const App = () => {
         <div className='wrapper'>
             <header>
                 <Navigation />
-                <Hero />
+                <ProjectInformation />
             </header> 
-            <main id='main' role='portfolio' aria-label='Here is a collection of works on a grid. Each work has their own card.'>
-            <Grid tyotArray={tyotState} />
+            <main>
+                <HeroImage />
+                <MainContent />
             </main>
+            <Footer />
         </div>    
     )
 }

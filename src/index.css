@@ -22,10 +22,6 @@ h1 {
     width: 80%;
 }
 
-h2 {
-    font-family: 'Open Sans', sans-serif;
-}
-
 /* Related to structure */
 
 .wrapper {
@@ -87,8 +83,8 @@ z-index: -999;
     list-style: none;
 }
 
-.header-navigation-items li {
-    padding: 20px;
+.log-in {
+    margin-right: 20px;
 }
 
 /* Hero */
@@ -120,7 +116,7 @@ header {
 
 .hero-container p {
     margin-top: 26px;
-    max-width: 400px;
+    max-width: 480px;
 }
 
 .main-image-container {
@@ -132,9 +128,110 @@ header {
 }
 
 .hero-image {
-    width: 100%;
+    max-width: 520px;
     height: auto;
 }
+
+/* Hero view when a project is opened*/
+
+.hero-project-container {
+    display: grid;
+    background-color: #ffff;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    
+    padding: 20px 20px 20px 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.project-headline {
+    margin-top: 0;
+}
+
+.short-description {
+    margin-top: 20px;
+    max-width: 480px;
+}
+
+.makers-year {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+}
+
+.makers-year li {
+    list-style: none;
+}
+
+.makers, .year {
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Main Content when project is opened */
+
+.cover-image-wrapper {
+    width: 100%;
+    background-color: #ffff;
+}
+
+.hero-cover-image {
+    margin: 0 auto;
+    max-width: 1080px;
+    height: 420px;
+    background-color:rgb(83, 83, 83);
+    background-image: url('./assets/hero-cover-image-placeholder.png');
+}
+
+.description-wrapper {
+
+    background-color: #ffff;
+    padding: 20px 20px 20px 20px;
+}
+
+.description-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #ffff;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+.long-description-headline {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.long-description-paragraph {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid container small breakpoint (mobile)*/
+@media only screen and (max-width: 520px) {
+
+    .hero-project-container {
+        padding: 20px 20px 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-headline {
+        margin-top: 0px;
+        line-height: 1.2;
+    }
+
+    .short-description {
+        max-width: 300px;
+    }
+
+}
+
+/* Project preview Grid */
 
 .grid-wrapper {
     background-color: #f0f0f0;
@@ -225,3 +322,11 @@ z-index: 999;
     max-width: 96%;
 }
 
+/* Footer*/
+
+footer {
+    max-width: 100%;
+    background-color: rgb(32, 32, 32);
+    padding: 20px;
+    height: 40px;
+}
