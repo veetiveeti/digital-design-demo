@@ -165,6 +165,19 @@ const App = () => {
     }, [])
     
     return (
+        // Etusivunäkymässä renderöitävät komponentit:
+        // // Navigation
+        // // Hero
+        // // Grid
+        // // Preview
+
+        // Projektinäkymässä:
+        // // Navigation
+        // // ProjectInformation
+        // // HeroImage
+        // // MainContent
+
+
         <div className='wrapper'>
             <header>
                 <Navigation />
