@@ -187,7 +187,6 @@ const App = () => {
                 <HeroImage />
                 <MainContent />
             </main>
-            <Footer />
         </div>    
     )
 }
