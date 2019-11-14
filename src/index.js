@@ -55,11 +55,13 @@ const App = () => {
         <div className='wrapper'>
             <header>
                 <Navigation />
-                <Hero />
-            </header>
-                <Main selectedSubmission={selectedSubmission} tyotState={tyotState} />
-            <Footer />
-        </div>
+                <ProjectInformation />
+            </header> 
+            <main>
+                <HeroImage />
+                <MainContent />
+            </main>
+        </div>    
     )
 }
 
