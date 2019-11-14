@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from './Grid'
-import HeroImage from './HeroImage'
 import MainContent from './MainContent'
+import ProjectInformation from './ProjectInformation'
 
 const Main = ({ selectedSubmission, tyotState }) => {
 
@@ -20,8 +20,7 @@ const Main = ({ selectedSubmission, tyotState }) => {
     } else {
         return (
             <main>
-                <HeroImage submissionId={selectedSubmission} />
-                <MainContent submissionID={selectedSubmission}  />
+                <MainContent submissionId={selectedSubmission}  />
             </main>
         )
     }

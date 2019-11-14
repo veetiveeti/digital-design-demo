@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectInformation from './ProjectInformation'
 
 const MainContent = () => {
     return (
@@ -10,6 +11,7 @@ const MainContent = () => {
                     Adrahil, captain to ondoher alcarin, title of atanatar ii barahir grandson of faramir battle-under-stars captain of despair captains of the west harrowdale house of elrond last gate light of valinor myrtle burrows.
                 </p>
             </div>
+            <ProjectInformation />
         </section>
     )
 }
