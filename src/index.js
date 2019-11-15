@@ -6,25 +6,22 @@ import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Main from './components/Main'
-
+import submissions from './utils/submissions'
 
 const App = () => {
 
-    // Testidataa alapuolella, korvaa kenttä "kuva" kuvan urlilla
-    // Haetaan data from mongoDB
-
     const [selectedSubmission, setSelectedSubmission] = useState([null])
+    // Määrittää näkymän. tähän mennessä 'landing' meinaa grid näkymää ja 'inspect' meinaa 
+    // tietty sitä yksittäisen työn tarkastelunäkymää.
+    const [applicationState, setApplicationState] = useState('landing')
 
     const [tyotState, setTyotState] = useState([])
 
-    
-
     useEffect(() => {
-        setSelectedSubmission('jotainmuuta')
-        axios
-            .get('http://localhost:3001/submissions')
+        setSelectedSubmission(null)
+        submissions
+            .getAll()
             .then(response => {
-                console.log('promise fulfilled')
                 setTyotState(response.data)
             })
     }, [])
@@ -51,7 +48,11 @@ const App = () => {
                 <Navigation />
                 <Hero />
             </header>
-                <Main selectedSubmission={selectedSubmission} tyotState={tyotState} />
+                <Main 
+                    selectedSubmission={selectedSubmission} 
+                    tyotState={tyotState} 
+                    applicationState={applicationState}
+                    />
             <Footer />
         </div>
     )

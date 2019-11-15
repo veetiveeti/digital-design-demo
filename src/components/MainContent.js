@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectInformation from './ProjectInformation'
 
-const MainContent = () => {
+const MainContent = (props) => {
     return (
         <section className='description-wrapper'>
             <div className='description-container'>

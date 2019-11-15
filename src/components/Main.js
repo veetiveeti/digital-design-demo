@@ -3,7 +3,7 @@ import Grid from './Grid'
 import MainContent from './MainContent'
 import ProjectInformation from './ProjectInformation'
 
-const Main = ({ selectedSubmission, tyotState }) => {
+const Main = ({ applicationState, selectedSubmission, tyotState }) => {
 
     // Ehdollinen renderöinti
 
@@ -11,7 +11,7 @@ const Main = ({ selectedSubmission, tyotState }) => {
     // Muissa tapauksissa renderöidään MainContent. Seuraava askel on renderöidä <MainContent /> 
     // sisältö MongoDBn datan mukaan. Fronttihaaste Veetille? 
 
-    if (selectedSubmission === null) {
+    if (applicationState === 'landing') {
         return (
             <main>
                 <Grid submissions={tyotState} />

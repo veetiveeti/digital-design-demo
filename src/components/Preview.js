@@ -9,7 +9,7 @@ const Preview = (props) => {
             <p className='card-paragraph'>{props.picture} {props.description}</p>
             <p>{props.course}</p>
             <p>{props.user}</p>
-            <button onClick={props.selectSubmission}></button>
+            <button onClick={props.selectSubmission}>Lue lisää</button>
         </div>
     )
 }
