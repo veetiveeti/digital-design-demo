@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css'
-import axios from 'axios'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
@@ -26,7 +25,6 @@ const App = () => {
             })
     }, [])
 
-    console.log(tyotState)
 
         // Etusivunäkymässä renderöitävät komponentit:
         // // Navigation
@@ -40,18 +38,27 @@ const App = () => {
         // // HeroImage
         // // MainContent
 
+    const setToSelectedId = (id) => {
+        return () => {
+                setSelectedSubmission(id)
+                setApplicationState('inspect')
+            }
+        }
+        
+    
     return (
 
 
         <div className='wrapper'>
             <header>
                 <Navigation />
-                <Hero />
+                
             </header>
                 <Main 
                     selectedSubmission={selectedSubmission} 
                     tyotState={tyotState} 
                     applicationState={applicationState}
+                    handleSelection={setToSelectedId}
                     />
             <Footer />
         </div>

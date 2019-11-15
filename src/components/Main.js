@@ -2,8 +2,9 @@ import React from 'react'
 import Grid from './Grid'
 import MainContent from './MainContent'
 import ProjectInformation from './ProjectInformation'
+import Hero from './Hero'
 
-const Main = ({ applicationState, selectedSubmission, tyotState }) => {
+const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState }) => {
 
     // Ehdollinen renderöinti
 
@@ -14,13 +15,14 @@ const Main = ({ applicationState, selectedSubmission, tyotState }) => {
     if (applicationState === 'landing') {
         return (
             <main>
-                <Grid submissions={tyotState} />
+                <Hero />
+                <Grid submissions={tyotState} handleSelection={handleSelection} />
             </main>
         )
     } else {
         return (
             <main>
-                <MainContent submissionId={selectedSubmission}  />
+                <MainContent handleSelection={handleSelection} submissionId={selectedSubmission} tyotState={tyotState}  />
             </main>
         )
     }
