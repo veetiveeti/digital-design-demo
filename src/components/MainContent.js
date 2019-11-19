@@ -6,8 +6,6 @@ const MainContent = (props) => {
 
     const [submissionToShow, setSubmissionToShow] = useState([])
 
-    const selectedSubmissionId = props.submissionId
-
     console.log('submission id :' + props.submissionId)
 
     useEffect(() => {
