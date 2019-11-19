@@ -7,9 +7,10 @@ const getAll = () => {
 }
 
 const getById = (id) => {
-    return axios.get(baseUrl + ':' +id)
+    return axios.get(baseUrl + '/' +id)
 }
 
 export default {
-    getAll: getAll
+    getAll: getAll,
+    getById: getById
 }
