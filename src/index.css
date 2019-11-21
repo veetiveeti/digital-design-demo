@@ -203,6 +203,8 @@ header {
 }
 
 .description-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2px 2px 2px 2px;
     max-width: 1080px;
     margin: 0 auto;
     background-color: #ffff;
@@ -266,7 +268,7 @@ header {
 /* Container wrapper for Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px;
     background-color: #f0f0f0;
@@ -349,7 +351,7 @@ z-index: 999;
 
 footer {
     max-width: 100%;
-    background-color: rgb(32, 32, 32);
+    background-color: #ffff;
     padding: 20px;
     height: 40px;
 }

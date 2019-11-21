@@ -17,14 +17,26 @@ const MainContent = (props) => {
             })
     }, [])
   
+    //submissionToShow.makers -- create new array to makers-year with map
     return (
         <section className='description-wrapper'>
             <div className='description-container'>
                 <p className='long-description-paragraph'>
-                    <h1>{submissionToShow.headline}</h1>      
+                    <h1>{submissionToShow.headline}</h1> 
+                    <span className="yellowLine" /> 
+                    <p>{submissionToShow.shortDesc}</p>    
                 </p>
+                <div className='makers-year'>
+                <ul className='makers'>
+                    <h2>Team</h2>
+                    <li>{submissionToShow.makers}</li>
+                </ul>
+                <ul className='year'>
+                    <h2>Year</h2>
+                    <li>{submissionToShow.year}</li>
+                </ul>
             </div>
-            <ProjectInformation />
+            </div>
         </section>
     )
 }
