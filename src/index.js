@@ -52,7 +52,6 @@ const App = () => {
         <div className='wrapper'>
             <header>
                 <Navigation />
-                
             </header>
                 <Main 
                     selectedSubmission={selectedSubmission} 
@@ -60,7 +59,6 @@ const App = () => {
                     applicationState={applicationState}
                     handleSelection={setToSelectedId}
                     />
-            <Footer />
         </div>
     )
 }

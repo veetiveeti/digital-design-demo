@@ -10,11 +10,13 @@ const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState
 
     // Jos komponentin App muuttuja selectedSubmission === null renderöidään <Grid />
     // Muissa tapauksissa renderöidään MainContent. Seuraava askel on renderöidä <MainContent /> 
-    // sisältö MongoDBn datan mukaan. Fronttihaaste Veetille? 
+    // sisältö MongoDBn datan mukaan.
+
+    //main id='main' for WCAG and Keyboard Navigation reasons.
 
     if (applicationState === 'landing') {
         return (
-            <main>
+            <main id='main'>
                 <Hero />
                 <Grid submissions={tyotState} handleSelection={handleSelection} />
             </main>
