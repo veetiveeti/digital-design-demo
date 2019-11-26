@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import Main from './components/Main'
 import submissions from './utils/submissions'
 
+
+
 const App = () => {
 
     const [selectedSubmission, setSelectedSubmission] = useState([null])
