@@ -67,6 +67,7 @@ h1 {
     font-weight: 700;
     font-size: 3.5em;
     line-height: 1.2;
+    margin-top: 0px;
     margin-bottom: 20px;
     width: 86%;
 }
@@ -251,8 +252,12 @@ header {
 }
 
 .description-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 2px 2px 2px 2px;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 20px 40px 20px;
 }
 
 .description-container {
@@ -261,7 +266,6 @@ header {
     max-width: 1080px;
     margin: 0 auto;
     background-color: #ffff;
-    padding: 40px;
     padding-bottom: 80px;
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
@@ -279,6 +283,7 @@ header {
 .long-description-paragraph {
     max-width: 720px;
     margin: 0 auto;
+    margin-top: 20px;
     line-height: 1.7;
 }
 

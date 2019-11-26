@@ -21,12 +21,13 @@ const MainContent = (props) => {
     return (
         <section className='description-wrapper'>
             <div className='description-container'>
+                <h1>{submissionToShow.headline}</h1> 
+                <span className="yellowLine" /> 
                 <p className='long-description-paragraph'>
-                    <h1>{submissionToShow.headline}</h1> 
-                    <span className="yellowLine" /> 
-                    <p>{submissionToShow.shortDesc}</p>    
+                   {submissionToShow.shortDesc}  
                 </p>
-                <div className='makers-year'>
+            </div>
+            <div className='makers-year'>
                 <ul className='makers'>
                     <h2>Team</h2>
                     <li>{submissionToShow.makers}</li>
@@ -35,7 +36,6 @@ const MainContent = (props) => {
                     <h2>Year</h2>
                     <li>{submissionToShow.year}</li>
                 </ul>
-            </div>
             </div>
         </section>
     )
