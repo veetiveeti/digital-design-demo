@@ -4,7 +4,7 @@ import mainImage from '../assets/hero_placeholder_image.png';
 const Preview = (props) => {
     
     return (
-        <div className='preview-card'>
+        <div className='preview-card' onClick={props.handleSelection}>
             <img src={mainImage} />
             <h2>{props.name}</h2>
             <p className='card-paragraph'>{props.picture} {props.description}</p>
