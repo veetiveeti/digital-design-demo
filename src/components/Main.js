@@ -18,7 +18,7 @@ const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState
         return (
             <main id='main'>
                 <Hero />
-                <Grid submissions={tyotState} handleSelection={handleSelection} />
+                <Grid submissions={tyotState} handleSelection={handleSelection}/>
             </main>
         )
     } else {

@@ -10,7 +10,7 @@ const Preview = (props) => {
             <p className='card-paragraph'>{props.picture} {props.description}</p>
             <p>{props.course}</p>
             <p>{props.user}</p>
-            <button onClick={props.handleSelection}>Read More </button>
+            <button onClick={props.handleSelection} aria-label='Read more about this project'>Read More </button>
         </div>
     )
 }

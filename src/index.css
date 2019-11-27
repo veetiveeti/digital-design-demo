@@ -183,7 +183,7 @@ header {
 
 .hero-image {
     width: 100%;
-    max-width: 420px;
+    max-width: 380px;
     height: auto;
 }
 
@@ -348,7 +348,7 @@ header {
     }
 }
 
-/* Grid container small breakpoint (mobile)*/
+/* Homepage view, small breakpoint (mobile)*/
 @media only screen and (max-width: 520px) {
 
     .header-navigation-items li {
@@ -359,6 +359,10 @@ header {
         padding: 20px 20px 40px 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-text-container {
+        padding-bottom: 0;
     }
 
     h1 {
