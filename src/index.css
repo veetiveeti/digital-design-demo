@@ -56,7 +56,7 @@
 body {
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
     background-color: #ffff;
 }
@@ -213,7 +213,7 @@ header {
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: start;
+    justify-items: center;
 }
 
 .makers-year li {
@@ -257,6 +257,7 @@ header {
     margin: 0 auto;
     margin-top: 40px;
     display: grid;
+    grid-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px 40px 20px;
 }
@@ -420,6 +421,8 @@ z-index: 999;
 .card-paragraph {
     max-width: 94%;
 }
+
+
 
 .preview-card button {
     text-align: left;
