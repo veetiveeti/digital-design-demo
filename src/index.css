@@ -182,6 +182,7 @@ header {
 }
 
 .hero-image {
+    width: 100%;
     max-width: 420px;
     height: auto;
 }
@@ -212,7 +213,7 @@ header {
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: end;
+    justify-items: start;
 }
 
 .makers-year li {
@@ -323,7 +324,7 @@ header {
 /* Project preview Grid */
 
 .grid-wrapper {
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -334,7 +335,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
     max-width: 1080px;
     margin: 0 auto;
 }
