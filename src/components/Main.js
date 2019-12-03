@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from './Grid'
 import MainContent from './MainContent'
 import ProjectInformation from './ProjectInformation'
+import ReturnToHome from './ReturnToHome'
 import Hero from './Hero'
 
 const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState }) => {
@@ -24,6 +25,7 @@ const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState
     } else {
         return (
             <main>
+                <ReturnToHome />
                 <MainContent handleSelection={handleSelection} submissionId={selectedSubmission} tyotState={tyotState}  />
             </main>
         )

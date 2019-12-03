@@ -83,6 +83,10 @@ h1 {
    -ms-animation: fadeIn ease 1s;
 }
 
+main {
+    display: grid;
+}
+
 /* Accessibility */
 
 a:focus {
@@ -137,6 +141,28 @@ z-index: -999;
     list-style: none;
 }
 
+.header-navigation-items a {
+    text-decoration: none;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    width: 20%;
+    background-color: #ffff;
+    color: #737373;
+    border: none;
+    height: 64px;
+    font-size: 1em;
+}
+
+.header-navigation-items :hover {
+    color: black;
+}
+
+i {
+    opacity: 60%;
+}
+
 /* Hero */
 
 header {
@@ -185,6 +211,20 @@ header {
 
 /* Hero view when a project is opened*/
 
+.return-home-button {
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 20px;
+    width: 20%;
+    
+    background-color: #ffff;
+    color: #737373;
+    border: none;
+    height: 64px;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
 .hero-project-container {
     display: grid;
     background-color: #ffff;
@@ -207,6 +247,7 @@ header {
 
 .makers-year {
     margin-top: 0;
+    padding: 16px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -253,7 +294,7 @@ header {
     margin: 0 auto;
     margin-top: 40px;
     display: grid;
-    grid-gap: 40px;
+    grid-gap: 16px;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px 40px 20px;
 }
@@ -352,6 +393,8 @@ header {
         padding: 5px;
     }
 
+    
+
     .hero-container {
         padding: 20px 20px 40px 20px;
         display: grid;
@@ -417,8 +460,6 @@ z-index: 999;
 .card-paragraph {
     max-width: 94%;
 }
-
-
 
 .preview-card button {
     text-align: left;
