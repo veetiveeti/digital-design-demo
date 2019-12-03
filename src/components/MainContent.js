@@ -16,6 +16,16 @@ const MainContent = (props) => {
                 setSubmissionToShow(response.data)
             })
     }, [])
+
+    const Makers = () => {
+        return (
+            <li>{submissionToShow.makers}</li>
+        )
+    }
+
+    const rows = () => submissionToShow.makers.map(makers =>
+        <Makers />
+    )
   
     //submissionToShow.makers -- create new array to makers-year with map
     return (
@@ -30,7 +40,7 @@ const MainContent = (props) => {
             <div className='makers-year'>
                 <ul className='makers'>
                     <h2>Team</h2>
-                    <li>{submissionToShow.makers}</li>
+                    <li>{rows}</li>
                 </ul>
                 <ul className='year'>
                     <h2>Year</h2>

@@ -66,7 +66,7 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 3.5em;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-top: 0px;
     margin-bottom: 20px;
     width: 86%;
@@ -125,7 +125,7 @@ z-index: -999;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
@@ -135,10 +135,6 @@ z-index: -999;
     flex-wrap: nowrap;
     justify-content: space-between;
     list-style: none;
-}
-
-.log-in {
-    margin-right: 20px;
 }
 
 /* Hero */
@@ -151,7 +147,7 @@ header {
     padding: 20px 20px 40px 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
     background-color: #ffff;
 }
@@ -196,7 +192,7 @@ header {
     align-content: center;
     
     padding: 20px 20px 20px 20px;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
@@ -253,7 +249,7 @@ header {
 }
 
 .description-wrapper {
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
     margin-top: 40px;
     display: grid;
@@ -265,7 +261,7 @@ header {
 .description-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2px 2px 2px 2px;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
     background-color: #ffff;
     padding-bottom: 80px;
@@ -337,7 +333,7 @@ header {
     grid-gap: 20px;
     padding: 20px;
     background-color: #e6e6e6;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
