@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import Main from './components/Main'
 import submissions from './utils/submissions'
 
+
+
 const App = () => {
 
     const [selectedSubmission, setSelectedSubmission] = useState([null])
@@ -52,7 +54,6 @@ const App = () => {
         <div className='wrapper'>
             <header>
                 <Navigation />
-                
             </header>
                 <Main 
                     selectedSubmission={selectedSubmission} 
@@ -60,7 +61,6 @@ const App = () => {
                     applicationState={applicationState}
                     handleSelection={setToSelectedId}
                     />
-            <Footer />
         </div>
     )
 }

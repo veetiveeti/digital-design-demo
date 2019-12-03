@@ -4,12 +4,61 @@
 /* Default = Open Sans, else = sans-serif*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
 
+/* Keyframes for fadeIn animation */
+
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+/* Body styles */
+
 body {
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #f0f0f0;
+    font-size: 17px;
+    line-height: 1.6;
+    background-color: #ffff;
 }
 
 /* Related to typography */
@@ -17,16 +66,21 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 3.5em;
-    line-height: 1.2;
-    margin-bottom: 28px;
-    width: 80%;
+    line-height: 1.1;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 86%;
 }
 
 /* Related to structure */
 
 .wrapper {
    margin: 0 auto;
-   
+   animation: fadeIn ease 1s;
+   -webkit-animation: fadeIn ease 1s;
+   -moz-animation: fadeIn ease 1s;
+   -o-animation: fadeIn ease 1s;
+   -ms-animation: fadeIn ease 1s;
 }
 
 /* Accessibility */
@@ -71,7 +125,7 @@ z-index: -999;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
@@ -83,14 +137,9 @@ z-index: -999;
     list-style: none;
 }
 
-.log-in {
-    margin-right: 20px;
-}
-
 /* Hero */
 
 header {
-    box-shadow: rgba(42,42,42,0.05) 0px 8px 8px;
     background-color: #ffff;
 }
 
@@ -98,8 +147,9 @@ header {
     padding: 20px 20px 40px 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
+    background-color: #ffff;
 }
 
 .hero-text-container {
@@ -116,7 +166,7 @@ header {
 
 .hero-container p {
     margin-top: 26px;
-    max-width: 480px;
+    max-width: 440px;
 }
 
 .main-image-container {
@@ -128,7 +178,8 @@ header {
 }
 
 .hero-image {
-    max-width: 520px;
+    width: 100%;
+    max-width: 380px;
     height: auto;
 }
 
@@ -141,7 +192,7 @@ header {
     align-content: center;
     
     padding: 20px 20px 20px 20px;
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
@@ -158,7 +209,7 @@ header {
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: end;
+    justify-items: center;
 }
 
 .makers-year li {
@@ -198,16 +249,27 @@ header {
 }
 
 .description-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 2px 2px 2px 2px;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 20px 40px 20px;
 }
 
 .description-container {
-    max-width: 1080px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2px 2px 2px 2px;
+    max-width: 980px;
     margin: 0 auto;
     background-color: #ffff;
-    padding: 40px;
     padding-bottom: 80px;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
 }
 
 .long-description-headline {
@@ -217,8 +279,9 @@ header {
 }
 
 .long-description-paragraph {
-    max-width: 720px;
+    max-width: 530px;
     margin: 0 auto;
+    margin-top: 20px;
     line-height: 1.7;
 }
 
@@ -258,7 +321,7 @@ header {
 /* Project preview Grid */
 
 .grid-wrapper {
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -266,11 +329,11 @@ header {
 /* Container wrapper for Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0;
-    max-width: 1080px;
+    background-color: #e6e6e6;
+    max-width: 980px;
     margin: 0 auto;
 }
 
@@ -282,7 +345,7 @@ header {
     }
 }
 
-/* Grid container small breakpoint (mobile)*/
+/* Homepage view, small breakpoint (mobile)*/
 @media only screen and (max-width: 520px) {
 
     .header-navigation-items li {
@@ -293,6 +356,10 @@ header {
         padding: 20px 20px 40px 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-text-container {
+        padding-bottom: 0;
     }
 
     h1 {
@@ -318,18 +385,24 @@ header {
     }
 }
 
+/* Preview-card section */
+
 .preview-card {
     background-color: #ffff;
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
     padding: 20px;
     font-size: 16px;
     border-radius: 4px;
+    animation: fadeIn ease 1.3s;
+    -webkit-animation: fadeIn ease 1.3s;
+    -moz-animation: fadeIn ease 1.3s;
+    -o-animation: fadeIn ease 1.3s;
+    -ms-animation: fadeIn ease 1.3s;
 }
 
 .preview-card img {
         object-fit: cover;
         width: 100%;
-        height: 100%;
     }
 
 .preview-card:hover {
@@ -342,14 +415,39 @@ z-index: 999;
 }
 
 .card-paragraph {
-    max-width: 96%;
+    max-width: 94%;
+}
+
+
+
+.preview-card button {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background-color: #ffff;
+    color: #737373;
+    border: none;
+    height: 64px;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+button:focus {
+    border-style: dotted;
+    color: black;
+}
+
+button:hover {
+
+    color: black;
 }
 
 /* Footer*/
 
 footer {
     max-width: 100%;
-    background-color: rgb(32, 32, 32);
+    background-color: #ffff;
     padding: 20px;
     height: 40px;
 }
