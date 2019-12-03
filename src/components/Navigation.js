@@ -11,7 +11,7 @@ const Navigation = () => {
             </a>
             <Logo />
             <ul className='header-navigation-items' role='navigation'>
-            <li className='external-link'><a href="https://www.metropolia.fi/en/academics/degree-programmes-in-finnish/media/#c42666" target='_blank' role='link' aria-label='This will you transfer to external Metropolia Digital Design Website'> Metropolia <i><ExternalLink /></i></a></li>
+            <li className='external-link'><a href="https://www.metropolia.fi/en/academics/degree-programmes-in-finnish/media/#c42666" target='_blank' role='link' aria-label='This will you transfer to external Metropolia Digital Design Website'> Metropolia </a></li>
             </ul>
         </nav>
     )
