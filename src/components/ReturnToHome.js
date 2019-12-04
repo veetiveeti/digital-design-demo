@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ReturnToHome = () => {
+const ReturnToHome = ({handleSelection}) => {
     return (
-        <button className='return-home-button'>Return to Homepage</button>
+        <section className='return-home-container'>
+        <button onClick={handleSelection(null)} className='return-home-button'>Return to Homepage</button>
+        </section>
     )
 }
 

@@ -96,15 +96,23 @@ a:focus {
     padding: 4px;
 }
 
+.header-navigation-items:focus {
+    border-style: dotted;
+    width: 1px;
+    color: black;
+    padding: 4px;
+}
+
 .skip
 {
+display: inline;
+padding-bottom: 10px;
 position:absolute;
 left:-10000px;
 top:auto;
-width:1px;
-height:1px;
 overflow:hidden;
 z-index: -999;
+background-color: white;
 }
 
 .skip:focus {
@@ -160,10 +168,6 @@ z-index: -999;
     color: black;
 }
 
-i {
-    opacity: 60%;
-}
-
 /* Hero */
 
 header {
@@ -212,14 +216,20 @@ header {
 
 /* Hero view when a project is opened*/
 
+.return-home-container {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 980px;
+}
+
 .return-home-button {
     text-align: left;
-    margin: 0 auto;
     width: fit-content;  
     background-color: #ffff;
     color: #737373;
     border: none;
     height: 28px;
+
     font-size: 1em;
     text-decoration: underline;
 }
@@ -296,11 +306,10 @@ header {
 .description-wrapper {
     max-width: 980px;
     margin: 0 auto;
-    margin-top: 40px;
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px 20px 40px 20px;
+    padding: 10px 10px 40px 10px;
 }
 
 .description-container {

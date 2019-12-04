@@ -25,7 +25,7 @@ const Main = ({ handleSelection, applicationState, selectedSubmission, tyotState
     } else {
         return (
             <main>
-                <ReturnToHome />
+                <ReturnToHome handleSelection={handleSelection}/>
                 <MainContent handleSelection={handleSelection} submissionId={selectedSubmission} tyotState={tyotState}  />
             </main>
         )

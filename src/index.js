@@ -41,19 +41,32 @@ const App = () => {
         // // MainContent
 
     const setToSelectedId = (id) => {
-        return () => {
+        if (applicationState === 'landing' && id === null) {
+            return () => {
+                setSelectedSubmission(null)
+                setApplicationState('landing')
+            }
+        } else if (applicationState === 'landing') {
+            return () => {
                 setSelectedSubmission(id)
                 setApplicationState('inspect')
-            }
+            }    
         }
-        
+        return () => {
+            setSelectedSubmission(null)
+            setApplicationState('landing')
+            console.log('jotain tapahtuu')
+        }
+    }
+
     
-    return (
 
-
+        return (
         <div className='wrapper'>
             <header>
-                <Navigation />
+                <Navigation 
+                handleSelection={setToSelectedId}
+                />
             </header>
                 <Main 
                     selectedSubmission={selectedSubmission} 
