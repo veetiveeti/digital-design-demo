@@ -290,9 +290,8 @@ header {
 
 /* Main Content when project is opened */
 
-.cover-image-wrapper {
-    width: 100%;
-    background-color: #ffff;
+.project-details-container {
+    grid-template-rows: 2;
 }
 
 .hero-cover-image {
@@ -326,17 +325,10 @@ header {
     -ms-animation: fadeIn ease 1s;
 }
 
-.long-description-headline {
-    max-width: 720px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.long-description-paragraph {
-    max-width: 530px;
-    margin: 0 auto;
-    margin-top: 20px;
-    line-height: 1.7;
+.long-description-container {
+        margin: 0 auto;
+        margin-top: 20px;
+        line-height: 1.7;  
 }
 
 /* MainContent when project is opened, small breakpoint (mobile) */
